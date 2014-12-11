@@ -1,0 +1,1 @@
+Very basic rabbitMQ based queueing app for covet monitoring.

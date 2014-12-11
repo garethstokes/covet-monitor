@@ -1,0 +1,40 @@
+{
+  "name": "Covet-Monitor",
+  "description": "An Express 4 app that works all the way into production",
+  "website": "https://github.com/garethstokes/covet-monitor",
+  "repository": "https://github.com/garethstokes/covet-monitor",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  "success_url": "/",
+  "keywords": [
+    "node",
+    "express",
+    "production"
+  ],
+  "scripts": {
+    "postdeploy": "echo 'restarting'"
+  },
+  "addons": [
+    "mongohq",
+    "rediscloud",
+    "cloudamqp",
+    "blitz"
+  ],
+  "env": {
+    "THRIFTY": {
+      "description": "run on a single (free) dyno",
+      "value": "true"
+    },
+    "CONCURRENCY": {
+      "description": "level of concurrency for web processes",
+      "value": "4"
+    },
+    "WORKER_CONCURRENCY": {
+      "description": "level of concurrency for worker processes",
+      "value": "4"
+    },
+    "COOKIE_SECRET": {
+      "description": "a secret key for signed cookies",
+      "generator": "secret"
+    }
+  }
+}
